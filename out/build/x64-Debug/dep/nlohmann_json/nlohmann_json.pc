@@ -1,0 +1,4 @@
+Name: nlohmann_json
+Description: JSON for Modern C++
+Version: 3.11.2
+Cflags: -IG:/CodingSon/C++/Projects/RandomizeAnime/out/install/x64-Debug/include
