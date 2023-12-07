@@ -17,6 +17,9 @@
 #define TITLE_MAIN 1006
 #define TITLE_OUT 1007
 #define NEXT_BUTTON 1008
+#define CONFIRM_GENRES_BUTTON 1009
+
+#define GENRE_CHECKBOX 1100
 
 // enum winMenu{
 //     text_input = 1001,
@@ -29,6 +32,13 @@
 //     next_button = 1008,
 // };
 
+struct pos_size
+{
+    int x;
+    int y;
+    int width;
+    int height;
+};
 
 static std::vector<Anime> animeList;
 
@@ -58,9 +68,8 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR LpCmdLine
     0,                              // Optional window styles.
     wc.lpszClassName,               // Window class
     L"App",                         // Window text
-    WS_OVERLAPPEDWINDOW,            // Window stylem
-                                // Size and position
-    CW_USEDEFAULT, CW_USEDEFAULT, width, height,
+    WS_OVERLAPPEDWINDOW,            // Window style
+    CW_USEDEFAULT, CW_USEDEFAULT, width, height, // Size and position
     NULL,                           // Parent window
     NULL,                           // Menu
     hInstance,                      // Instance handle
@@ -71,17 +80,22 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR LpCmdLine
         return 0;
     }
     // creating a button
-    const int button_width = 150, button_height = 30;
-    const int button_x = (width-button_width)/2, button_y = height/2-50;
-    HWND hButton = CreateWindowExW( 0, L"BUTTON", L"Confirm", WS_CHILD | BS_PUSHBUTTON, button_x, button_y, button_width, button_height, hwnd, HMENU(CONFIRM_USERNAME_BUTTON), hInstance, NULL );
+    pos_size button = {0, 0, 150, 30};
+    button.x = (width-button.width)/2;
+    button.y = height/2-50;
+    HWND hButton = CreateWindowExW(0, L"BUTTON", L"Confirm", WS_CHILD | BS_PUSHBUTTON, button.x, button.y, button.width, button.height, hwnd, HMENU(CONFIRM_USERNAME_BUTTON), hInstance, NULL );
     // MessageBox(hButton, L"Hello!", L"Message", MB_OK);
     //creating a text box
-    const int input_width = 150, input_height = 30;
-    const int input_x = (width-input_width)/2, input_y = height/2-100;
-    HWND hText = CreateWindowEx(0 , L"EDIT", NULL, WS_CHILD | WS_VISIBLE | WS_BORDER, input_x, input_y, input_width, input_height, hwnd, HMENU(TEXT_INPUT), hInstance, NULL );
+    pos_size input = {0, 0, 150, 30};
+    input.x = (width-input.width)/2;
+    input.y = height/2-100;
+    HWND hText = CreateWindowEx(0 , L"EDIT", NULL, WS_CHILD | WS_VISIBLE | WS_BORDER, input.x, input.y, input.width, input.height, hwnd, HMENU(TEXT_INPUT), hInstance, NULL );
 
-    HWND hStaticText = CreateWindowEx(WS_EX_LEFT, L"Static", NULL, WS_CHILD | WS_VISIBLE, input_x, input_y-input_height, 150, 20, hwnd, HMENU(TEXT_ENTER_USR), hInstance, NULL);
+    HWND hStaticText = CreateWindowEx(WS_EX_LEFT, L"Static", NULL, WS_CHILD | WS_VISIBLE, input.x, input.y-input.height, 150, 20, hwnd, HMENU(TEXT_ENTER_USR), hInstance, NULL);
     SetWindowText( hStaticText, L"Enter Username:" );
+
+    const int numOfGenres = 76;
+    HWND hGenreCheckBoxes[numOfGenres];
 
     HWND hContents[4];
     hContents[0] = CreateWindowEx(WS_EX_RIGHT, L"Static", NULL, WS_CHILD, 50, 50, 80, 20, hwnd, HMENU(USERNAME_MAIN), hInstance, NULL);
@@ -89,7 +103,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR LpCmdLine
     hContents[2] = CreateWindowEx(WS_EX_LEFT, L"Edit", NULL, WS_CHILD | ES_READONLY, 150, 50, 200, 20, hwnd, HMENU(USERNAME_OUT), hInstance, NULL );
     hContents[3] = CreateWindowEx(WS_EX_LEFT, L"Edit", NULL, WS_CHILD | ES_READONLY, 150, 100, 200, 20, hwnd, HMENU(TITLE_OUT), hInstance, NULL );
 
-    HWND hNextButton = CreateWindowExW(0, L"BUTTON", L"Next", WS_CHILD | BS_PUSHBUTTON, button_x, button_y, button_width, button_height, hwnd, HMENU(NEXT_BUTTON), hInstance, NULL);
+    HWND hNextButton = CreateWindowExW(0, L"BUTTON", L"Next", WS_CHILD | BS_PUSHBUTTON, button.x, button.y, button.width, button.height, hwnd, HMENU(NEXT_BUTTON), hInstance, NULL);
     
     ShowWindow(hwnd, nCmdShow);
     ShowWindow(hButton, SW_SHOW);
@@ -122,13 +136,13 @@ LRESULT CALLBACK WindowProc( HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam )
         {
             case CONFIRM_USERNAME_BUTTON:
             {
-                LPSTR tekstLosowy = new char[256];
-                GetDlgItemTextA(hwnd, TEXT_INPUT, tekstLosowy, 256);
-                // MessageBox( hwnd, tekstLosowy, L"Tekst z Pola", MB_ICONINFORMATION );
+                LPSTR input_username = new char[256];
+                GetDlgItemTextA(hwnd, TEXT_INPUT, input_username, 256);
+                // MessageBox( hwnd, input_username, L"Tekst z Pola", MB_ICONINFORMATION );
                 DestroyWindow(GetDlgItem(hwnd, TEXT_INPUT));
                 DestroyWindow(GetDlgItem(hwnd, CONFIRM_USERNAME_BUTTON));
                 DestroyWindow(GetDlgItem(hwnd, TEXT_ENTER_USR));
-                g_username = tekstLosowy;
+                g_username = input_username;
                 if(g_username == "")
                 {
                     MessageBoxW(hwnd, L"Nie podałeś użytkownika", L"Nie psuj", MB_ICONERROR);

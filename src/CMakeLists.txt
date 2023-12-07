@@ -13,7 +13,7 @@ target_link_libraries(${PROJECT_NAME}
 
 target_link_libraries(${PROJECT_NAME} nlohmann_json::nlohmann_json)
 
-set(WinKitsVersion "10.0.22621.0")
+set(WinKitsVersion "10.0.22621.0") # lap 10.0.22621.0
 
 add_custom_command(TARGET ${PROJECT_NAME}
                    POST_BUILD
