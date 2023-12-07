@@ -21,7 +21,7 @@ std::vector<Anime> returnTableOfAnime(const std::string& client_id, const std::s
         return temp;
     }
     std::vector<Anime> animeList;
-    animeList.reserve(200);
+    animeList.reserve(1000);
     // std::cout<<std::setw(4)<<j<<std::endl;
     for(nlohmann::json data : j["data"])
     {

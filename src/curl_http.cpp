@@ -25,7 +25,7 @@ static size_t curlstr_callback(void *ptr, size_t size, size_t nmemb, std::string
 
 std::string get_list_from_site_with_token(const std::string& client_id, const std::string& userName)
 {
-    std::string mal_url = "https://api.myanimelist.net/v2/users/" + userName +"/animelist?limit=1000&status=plan_to_watch&fields=status";
+    std::string mal_url = "https://api.myanimelist.net/v2/users/" + userName +"/animelist?limit=1000&status=plan_to_watch&fields=status,start_date,end_date,mean,popularity,nsfw,genres,status,rating";
     struct curl_slist* headers = NULL;
 
     CURL* request = curl_easy_init();
