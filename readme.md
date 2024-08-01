@@ -42,18 +42,21 @@ How checkboxes working?
 
 for airing status:
 
-<img src="preview/image-1.png" alt="status checked" width="200"/> - if checkbox is checked app will include a series with this status (default)
+<img src="preview/image-1.png" alt="status checked" width="200" height="30"/> - if checkbox is checked app will include a series with this status (default)
 
-
-![status unchecked](preview/image-2.png) - if checkbox is unchecked app will exclude a series with this status
+<img src="preview/image-2.png" alt="status unchecked" width="200" height="30"/>
+ - if checkbox is unchecked app will exclude a series with this status
 
 for genres (more complicated): 
 
-![genres neutral](preview/image-3.png) - this means that the genres is neutral and does not influence the randomize process. (default)
+<img src="preview/image-3.png" alt="genres neutral" width="200" height="30"/>
+ - this means that the genres is neutral and does not influence the randomize process. (default)
 
-![genres unchecked](preview/image-4.png) - this means that every series with this genre will be exclude
+<img src="preview/image-4png" alt="genres unchecked" width="200" height="30"/>
+ - this means that every series with this genre will be exclude
 
-![genres checked](preview/image-5.png) - this means that the series MUST have this genre to take part in the randomize process.
+<img src="preview/image-5.png" alt="genres checked" width="200" height="30"/>
+ - this means that the series MUST have this genre to take part in the randomize process.
 
 4. **Decide if you want download a title's images.** (Optional. May take a while with a lot of Entries!) 
 
