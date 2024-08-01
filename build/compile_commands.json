@@ -1,25 +1,25 @@
 [
 {
   "directory": "D:/Coding/Project/RandomizeAnime/build/src",
-  "command": "C:/MinGW/bin/g++.exe  @CMakeFiles/RandomizeAnime.dir/includes_CXX.rsp -g -o CMakeFiles/RandomizeAnime.dir/main.cpp.obj -c D:/Coding/Project/RandomizeAnime/src/main.cpp",
+  "command": "C:/MinGW/bin/g++.exe  @CMakeFiles/RandomizeAnime.dir/includes_CXX.rsp  -std=c++17 -g -o CMakeFiles/RandomizeAnime.dir/main.cpp.obj -c D:/Coding/Project/RandomizeAnime/src/main.cpp",
   "file": "D:/Coding/Project/RandomizeAnime/src/main.cpp",
   "output": "src/CMakeFiles/RandomizeAnime.dir/main.cpp.obj"
 },
 {
   "directory": "D:/Coding/Project/RandomizeAnime/build/src",
-  "command": "C:/MinGW/bin/g++.exe  @CMakeFiles/RandomizeAnime.dir/includes_CXX.rsp -g -o CMakeFiles/RandomizeAnime.dir/curl_http.cpp.obj -c D:/Coding/Project/RandomizeAnime/src/curl_http.cpp",
+  "command": "C:/MinGW/bin/g++.exe  @CMakeFiles/RandomizeAnime.dir/includes_CXX.rsp  -std=c++17 -g -o CMakeFiles/RandomizeAnime.dir/curl_http.cpp.obj -c D:/Coding/Project/RandomizeAnime/src/curl_http.cpp",
   "file": "D:/Coding/Project/RandomizeAnime/src/curl_http.cpp",
   "output": "src/CMakeFiles/RandomizeAnime.dir/curl_http.cpp.obj"
 },
 {
   "directory": "D:/Coding/Project/RandomizeAnime/build/src",
-  "command": "C:/MinGW/bin/g++.exe  @CMakeFiles/RandomizeAnime.dir/includes_CXX.rsp -g -o CMakeFiles/RandomizeAnime.dir/func.cpp.obj -c D:/Coding/Project/RandomizeAnime/src/func.cpp",
+  "command": "C:/MinGW/bin/g++.exe  @CMakeFiles/RandomizeAnime.dir/includes_CXX.rsp  -std=c++17 -g -o CMakeFiles/RandomizeAnime.dir/func.cpp.obj -c D:/Coding/Project/RandomizeAnime/src/func.cpp",
   "file": "D:/Coding/Project/RandomizeAnime/src/func.cpp",
   "output": "src/CMakeFiles/RandomizeAnime.dir/func.cpp.obj"
 },
 {
   "directory": "D:/Coding/Project/RandomizeAnime/build/src",
-  "command": "C:/MinGW/bin/g++.exe  @CMakeFiles/RandomizeAnime.dir/includes_CXX.rsp -g -o CMakeFiles/RandomizeAnime.dir/anime.cpp.obj -c D:/Coding/Project/RandomizeAnime/src/anime.cpp",
+  "command": "C:/MinGW/bin/g++.exe  @CMakeFiles/RandomizeAnime.dir/includes_CXX.rsp  -std=c++17 -g -o CMakeFiles/RandomizeAnime.dir/anime.cpp.obj -c D:/Coding/Project/RandomizeAnime/src/anime.cpp",
   "file": "D:/Coding/Project/RandomizeAnime/src/anime.cpp",
   "output": "src/CMakeFiles/RandomizeAnime.dir/anime.cpp.obj"
 }

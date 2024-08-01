@@ -4,8 +4,9 @@ IF( WIN32 )
     SET ( CMAKE_SHARED_LINKER_FLAGS /MANIFEST:NO )
 ENDIF( WIN32 )
 
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++17")
 
-project(RandomizeAnime VERSION 0.3.0)
+project(RandomizeAnime VERSION 0.4.0)
 
 #build type
 set(CMAKE_BUILD_TYPE "Debug")

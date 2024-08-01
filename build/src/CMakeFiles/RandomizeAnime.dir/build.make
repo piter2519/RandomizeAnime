@@ -149,7 +149,7 @@ D:/Coding/Project/RandomizeAnime/RandomizeAnime.exe: src/CMakeFiles/RandomizeAni
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=D:/Coding/Project/RandomizeAnime/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable D:/Coding/Project/RandomizeAnime/RandomizeAnime.exe"
 	cd D:/Coding/Project/RandomizeAnime/build/src && "C:/Program Files/CMake/bin/cmake.exe" -E rm -f CMakeFiles/RandomizeAnime.dir/objects.a
 	cd D:/Coding/Project/RandomizeAnime/build/src && C:/MinGW/bin/ar.exe qc CMakeFiles/RandomizeAnime.dir/objects.a @CMakeFiles/RandomizeAnime.dir/objects1.rsp
-	cd D:/Coding/Project/RandomizeAnime/build/src && C:/MinGW/bin/g++.exe -g -Wl,--whole-archive CMakeFiles/RandomizeAnime.dir/objects.a -Wl,--no-whole-archive -o D:/Coding/Project/RandomizeAnime/RandomizeAnime.exe -Wl,--out-implib,D:/Coding/Project/RandomizeAnime/libRandomizeAnime.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles/RandomizeAnime.dir/linkLibs.rsp
+	cd D:/Coding/Project/RandomizeAnime/build/src && C:/MinGW/bin/g++.exe  -std=c++17 -g -Wl,--whole-archive CMakeFiles/RandomizeAnime.dir/objects.a -Wl,--no-whole-archive -o D:/Coding/Project/RandomizeAnime/RandomizeAnime.exe -Wl,--out-implib,D:/Coding/Project/RandomizeAnime/libRandomizeAnime.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles/RandomizeAnime.dir/linkLibs.rsp
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Adding custom manifest..."
 	cd D:/Coding/Project/RandomizeAnime/build/src && "C:\\Program Files (x86)\\Windows Kits\\10\\bin\\10.0.22621.0\\x86\\mt.exe" -manifest "D:/Coding/Project/RandomizeAnime\main.exe.manifest" -outputresource:"D:/Coding/Project/RandomizeAnime\RandomizeAnime.exe";1
 
