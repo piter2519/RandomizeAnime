@@ -43,5 +43,4 @@ add_library(json STATIC IMPORTED)
 set(CMAKE_LIBRARY_PATH ${CURL_LIB_DIR} ${CMAKE_LIBRARY_PATH})
 
 
-
 add_subdirectory(src)
