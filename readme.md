@@ -17,7 +17,7 @@ The application is written using WinApi (windows.h) and CMake for project manage
     ```
 
 2. **Client ID**
-    If you use, you should get and provide your own MyAnimeList API Developer Client ID in include/client_id.h string on line 61. You can get own client ID by creating account on [MyAnimeList](https://myanimelist.net/) and creating own Client ID on [API site](https://myanimelist.net/apiconfig).
+    If you use, you should get and provide your own MyAnimeList API Developer Client ID in "include/client_id.h" path. You can get own client ID by creating account on [MyAnimeList](https://myanimelist.net/) and creating own Client ID on [API site](https://myanimelist.net/apiconfig).
 
 3. **Build the Project:**
     Make sure you have CMake and g++ installed on your computer.
@@ -39,13 +39,19 @@ The application is written using WinApi (windows.h) and CMake for project manage
 3. **Select specify genres and airing status.** (optional)
 
 How checkboxes working?
+
 for airing status:
-![status checked](preview/image-1.png) - if checkbox is checked app will include a series with this status (default)
-![status unchecked](preview/image-2.png) - if checkbox is unchecked app will exclude a series with this status
+
+![status checked](preview/image-1.png) - if checkbox is checked app will include a series with this status (default) \n
+
+![status unchecked](preview/image-2.png) - if checkbox is unchecked app will exclude a series with this status \n
 
 for genres (more complicated): 
+
 ![genres neutral](preview/image-3.png) - this means that the genres is neutral and does not influence the randomize process. (default)
+
 ![genres unchecked](preview/image-4.png) - this means that every series with this genre will be exclude
+
 ![genres checked](preview/image-5.png) - this means that the series MUST have this genre to take part in the randomize process.
 
 4. **Decide if you want download a title's images.** (Optional. May take a while with a lot of Entries!) 
@@ -55,6 +61,7 @@ for genres (more complicated):
 ## Examples
 
 **Entering username menu's and first window of the application**
+
 ![Entering username menu](preview/image-6.png) 
 
 **Selecting genres and status.**
