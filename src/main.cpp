@@ -9,6 +9,7 @@
 #include <curl_http.h>
 #include <map>
 #include <Shellapi.h>
+#include <client_id.h>
 
 #define TEXT_INPUT 1001
 #define TEXT_ENTER_USR 1002
@@ -56,7 +57,6 @@ HINSTANCE g_hInstance;
 
 const int width = 600, height = 700;
 std::string g_username;
-std::string client_id = "YOUR_TOKEN"; //INSERT YOUR MAL API TOKEN HERE
 
 Gdiplus::Image* image = nullptr, *bg_img = nullptr;
 Gdiplus::Graphics* graphics = nullptr, *graphics_background = nullptr;
@@ -65,8 +65,8 @@ pos_size* bg_imgPos = new pos_size;
 
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR LpCmdLine, int nCmdShow)
 {
-    // HWND hwnd_console = GetConsoleWindow();
-    // ShowWindow(hwnd_console, SW_HIDE);
+    HWND hwnd_console = GetConsoleWindow();
+    ShowWindow(hwnd_console, SW_HIDE);
     Gdiplus::GdiplusStartupInput gdiplusStartupInput;
     ULONG_PTR gdiplusToken;
     GdiplusStartup(&gdiplusToken, &gdiplusStartupInput, nullptr);
@@ -661,9 +661,9 @@ LRESULT CALLBACK WindowProc( HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam )
             return (LRESULT)GetStockObject(WHITE_BRUSH);
         }
         case WM_SETFOCUS:
-            std::cout<<"Aplikacja uzyskala focus"<<std::endl;
+            //std::cout<<"Aplikacja uzyskala focus"<<std::endl;
         case WM_KILLFOCUS:
-            std::cout<<"Aplikacja stracila focus"<<std::endl;
+            //std::cout<<"Aplikacja stracila focus"<<std::endl;
 
         default:
         return DefWindowProc( hwnd, msg, wParam, lParam );

@@ -1,6 +1,6 @@
 # RandomizeAnime
 
-![RandomizeAnime Logo](ico/RandomizeAnime.ico)
+![RandomizeAnime Logo](res/ico/RandomizeAnime.ico)
 
 ## Description
 
