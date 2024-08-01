@@ -42,9 +42,10 @@ How checkboxes working?
 
 for airing status:
 
-![status checked](preview/image-1.png) - if checkbox is checked app will include a series with this status (default) \n
+<img src="preview/image-1.png" alt="status checked" width="200"/> - if checkbox is checked app will include a series with this status (default)
 
-![status unchecked](preview/image-2.png) - if checkbox is unchecked app will exclude a series with this status \n
+
+![status unchecked](preview/image-2.png) - if checkbox is unchecked app will exclude a series with this status
 
 for genres (more complicated): 
 
