@@ -56,7 +56,7 @@ HINSTANCE g_hInstance;
 
 const int width = 600, height = 700;
 std::string g_username;
-std::string client_id;
+std::string client_id = "YOUR_TOKEN"; //INSERT YOUR MAL API TOKEN HERE
 
 Gdiplus::Image* image = nullptr, *bg_img = nullptr;
 Gdiplus::Graphics* graphics = nullptr, *graphics_background = nullptr;
@@ -211,7 +211,6 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR LpCmdLine
     ShowWindow(hwnd, nCmdShow);
     ShowWindow(hButton, SW_SHOW);
     UpdateWindow( hwnd );
-    client_id = "353482731bcf9d0986b8e17046c49d33";
 
     graphics_background = new Gdiplus::Graphics(hwnd);
     // bg_img = new Gdiplus::Image(L"res/ico/RandomizeAnime.ico");
