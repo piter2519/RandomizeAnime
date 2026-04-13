@@ -639,6 +639,7 @@ LRESULT CALLBACK WindowProc( HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam )
                     SendMessage(GetDlgItem(hwnd, NEXT_BUTTON), BM_CLICK, 0, 0);
                 }
             }
+            break;
         }
     case WM_CTLCOLORSTATIC:
         {

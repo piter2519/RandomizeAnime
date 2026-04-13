@@ -4,12 +4,13 @@ include_directories(${PROJECT_SOURCE_DIR}/include)
 add_executable(${PROJECT_NAME} main.cpp curl_http.cpp func.cpp anime.cpp)
 
 
-target_link_libraries(${PROJECT_NAME}
-    -L${CURL_LIB_DIR}
-    -lcurl
-    -lgdiplus)
-
-target_link_libraries(${PROJECT_NAME} nlohmann_json::nlohmann_json)
+target_link_libraries(${PROJECT_NAME} PRIVATE 
+    CURL::libcurl 
+    nlohmann_json::nlohmann_json
+    gdiplus
+    ws2_32
+    crypt32
+    wldap32)
 
 add_custom_command(TARGET ${PROJECT_NAME}
                    POST_BUILD
