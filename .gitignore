@@ -1,5 +1,5 @@
 
-build/
+build/*
 bin/
 CMakeCache.txt
 CMakeFiles/
@@ -20,6 +20,6 @@ compile_commands.json
 .vscode/
 .vs/
 
-res/tokens/
+res/tokens/*
 res/img/*
 *.env
